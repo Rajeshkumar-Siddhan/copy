@@ -1,1 +1,2 @@
-This is to test
+oc patch postgrescluster tarsdb -n tars-db --type=json \
+  -p '[{"op":"remove","path":"/spec/backups/pgbackrest/repos/0/schedules"}]'
